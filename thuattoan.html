@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <script src="binary-search.js"></script>
+    <script src="linear-search.js"></script>
+    <script src="compare.js"></script>
+</head>
+<body>
+ <script>
+     let arr=[3,5,6,8,24,22,67,89,34,13];
+     let index= 22;
+     arr.sort(compare);
+
+     let start1= parseFloat(performance.now()) ;
+     linearsearch(arr,index);
+     let end1= parseFloat(performance.now()) ;
+      alert("thoi gian: "+ (end1-start1)  +"ms");
+
+     let start2= performance.now();
+     alert(binarysearch(arr,index));
+     let end2= performance.now();
+    alert("thoi gian: "+ (end2-start2)+"ms");
+
+ </script>
+</body>
+</html>
